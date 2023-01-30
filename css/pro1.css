@@ -1,0 +1,623 @@
+/* global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+.container {
+    /* container */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* end global rules */
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* fcontainer */
+@media (min-width: 768px) {
+    .fcontainer {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .fcontainer {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .fcontainer {
+        width: 1170px;
+    }
+}
+
+.header {
+    padding: 10px;
+}
+
+.header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+
+
+
+}
+
+.header .container .logo i {
+    position: absolute;
+
+    /* padding-top: 10px; */
+    /* margin-left: 200px; */
+}
+
+.header .container .links .menu i {
+
+    position: absolute;
+    /* margin-right: 200px; */
+
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .container .links ul {
+    position: absolute;
+
+    list-style: none;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    display: none;
+    z-index: 1;
+    right: -10px;
+    top: 25px;
+}
+
+.header .container .links ul a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 0px;
+    top: -19px;
+}
+
+.header .container .links:hover ul {
+    display: block;
+}
+
+/* move each element to the right by transition */
+.header .container .links ul a:hover {
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+/* make border downside the each menu */
+.header .container .links ul :not(:last-child) a {
+    border-bottom: solid 1px;
+}
+
+/* LANDING */
+.landing {
+    position: relative;
+    margin-top: 20px;
+    background-image: url(../images/landing.png);
+    background-size: cover;
+    height: 100vh;
+
+}
+
+
+/* text in landing */
+.landing .intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}
+
+.landing .intro p {
+    font-size: 15px;
+    max-width: fit-content;
+}
+
+/* features */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /* background-color: #f6f6f6; */
+
+}
+
+.features .fcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    /* justify-content: center; */
+    /* max-width: 1200px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.features .fcontainer .one,
+.two,
+.three {
+    text-align: center;
+}
+
+/* Small */
+@media (max-width: 768px) {
+    .features .fcontainer .one {
+        max-width: 300px;
+    }
+
+    .features .fcontainer .two {
+        max-width: 300px;
+    }
+
+    .features .fcontainer .three {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 300px) {
+    .features .fcontainer .one {
+        max-width: 100px;
+    }
+
+    .features .fcontainer .two {
+        max-width: 100px;
+    }
+
+    .features .fcontainer .three {
+        max-width: 100px;
+    }
+}
+
+/* icons */
+.features .fcontainer i {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+/* services */
+
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: #eee;
+}
+
+
+
+.services .scontainer .rowcontainer h2 {
+    font-size: 100px;
+    margin: 0;
+    color: #bcbcbc;
+
+    text-align: center;
+}
+
+.services .scontainer .rowcontainer p {
+    margin: -30px 100px 0px;
+    text-align: center;
+
+}
+
+/* Small (text services)*/
+@media (max-width: 768px) {
+    .services .scontainer .rowcontainer h2 {
+        font-size: 40px;
+    }
+
+    .services .scontainer .rowcontainer p {
+        margin: -15px 0px 0px;
+    }
+}
+
+/* services  logos */
+.services .scontainer .container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    text-align: center;
+}
+
+
+.services .scontainer .container .image img {
+    width: 350px;
+    height: 350px;
+}
+
+
+/* Small */
+@media (max-width: 450px) {
+
+    .services .scontainer .container3 .image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* .services .scontainer .container3 .image img::after {
+        width: 120px;
+        height: 120px;
+    } */
+
+    .services .container p {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 250px) {
+
+
+    .services .container h3 {
+        max-width: 100px;
+        font-size: 20px;
+    }
+
+
+
+    .services .container p {
+        max-width: 100px;
+    }
+}
+
+/* very small ..maybe its not real Xd */
+@media (max-width: 170px) {
+
+    .services .scontainer .rowcontainer h2 {
+        font-size: 25px;
+    }
+
+    .services .scontainer .rowcontainer p {
+        font-size: 10px;
+    }
+
+    .services .container h3 {
+        max-width: 80px;
+        font-size: 15px;
+    }
+
+    .services .container p {
+        max-width: 80px;
+    }
+}
+
+.services .scontainer .container .container3 .image {
+    position: relative;
+}
+
+.services .scontainer .container .container3 .image {
+    z-index: 1;
+}
+
+.services .scontainer .container .container3 .image::after {
+    content: "";
+    position: absolute;
+
+
+    height: calc(100% + 100px);
+    background-color: #9e9d54;
+    width: 100px;
+    right: 0px;
+    top: -50px;
+    z-index: -1;
+}
+
+@media (max-width: 1199px) {
+    .image::after {
+        display: none;
+    }
+}
+
+/* portfolio */
+
+
+.portfolio .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.portfolio .container .content img {
+    width: 350px;
+    height: 350px;
+}
+
+
+.portfolio .container .rowcontainer {
+
+    text-align: center;
+}
+
+.portfolio .container .rowcontainer h2 {
+    font-size: 100px;
+    margin: 0;
+    color: #bcbcbc;
+
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.portfolio .container .rowcontainer p {
+    margin: -55px 0px 40px;
+    text-align: center;
+
+}
+
+
+@media (max-width: 450px) {
+
+
+
+    .portfolio .container .rowcontainer h2 {
+
+        font-size: 40px;
+    }
+
+}
+
+/* about */
+/* text */
+.about {
+    background-color: #eee;
+}
+
+.about .container .rowcontainer h2 {
+    font-size: 100px;
+    margin: 0;
+    color: #bcbcbc;
+
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.about .container .rowcontainer p {
+    margin: -55px 100px 40px;
+    text-align: center;
+}
+
+
+/* about 2nd part */
+.about .container .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+}
+
+/* 
+.about .container .content .container1 {
+
+    position: relative;
+}
+
+.about .container .content .container2 :first-child::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 10px;
+    right: 280px;
+    background-color: #9e9d54;
+} */
+
+/* 
+.about .container .content .container1 .image img {
+    max-width: 100%;
+} */
+
+.about .container .content .container1 img {
+    width: 400px;
+    height: 400px;
+}
+
+.about .container .content .container1 {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    /* z-index: 1; */
+    display: inline;
+
+    flex: -1;
+}
+
+
+.about .container .content .container1::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 298px;
+    /* border: 50px solid black; */
+    border-bottom: 80px solid #9e9d54;
+    border-left: 80px solid #9e9d54;
+    right: -133px;
+    top: -50px;
+
+    /* right: -343px;
+    top: -35px; */
+    z-index: -1;
+}
+
+.about .container .content .container1::before {
+
+    content: "";
+    position: absolute;
+    height: calc(100% + 100px);
+    background-color: #9e9d54;
+    width: 100px;
+    right: 300px;
+    top: -50px;
+    z-index: -1;
+}
+
+.about .container .content .container2 .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 16px;
+}
+
+.about .container .content .container2 .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: #9e9d54;
+}
+
+.about .container .content .container2 .text p:last-of-type {
+    line-height: 2;
+    color: #777;
+}
+
+
+
+
+.about .container .content .container2 {
+    display: inline;
+}
+
+.about .container .content .container2 .text {
+    text-align: center;
+
+}
+
+@media (max-width: 991px) {
+
+    .about .container .content .container1::before,
+    .about .container .content .container1::after {
+        display: none;
+    }
+
+    .about .container .content .container1 img {
+        width: 320px;
+        height: 300px;
+    }
+
+    .about .container .content .container1 {
+        width: 320px;
+        height: 300px;
+    }
+}
+
+/* contact text */
+
+
+.contact .container .rowcontainer h2 {
+    font-size: 100px;
+    margin: 0;
+    color: #bcbcbc;
+
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.contact .container .rowcontainer p {
+    margin: -61px 0px 40px;
+    text-align: center;
+}
+
+/* -- */
+
+.contact .container .content .container1 .text .one {
+    color: #9e9d54;
+    font-weight: 800;
+    font-size: 50px;
+    margin: 0;
+}
+
+.contact .container .content .container1 .text .one1 {
+    color: #9e9d54;
+    font-weight: 800;
+    font-size: 50px;
+    text-indent: 100px;
+}
+
+.contact .container .content .container1 .text .two {
+    color: black;
+    font-size: larger;
+}
+
+
+@media (max-width: 400px) {
+    .contact .container .rowcontainer h2 {
+
+
+        font-size: 80px;
+    }
+
+    .contact .container .content .container1 .text .one1 {
+
+        text-indent: 0px;
+        font-size: 30px;
+    }
+}
+
+
+/* footer */
+.footer {
+    background-color: #9e9d54;
+    text-align: center;
+    font-weight: 10px;
+    font-size: 20px;
+}
+
+.footer span {
+    color: #0010f4;
+    font-weight: bold;
+}
