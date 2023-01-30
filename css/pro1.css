@@ -10,6 +10,9 @@ body {
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     /* container */
