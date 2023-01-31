@@ -24,7 +24,7 @@ html {
 
 /* end global rules */
 
-/* Small */
+/* Small  */
 @media (min-width: 768px) {
     .container {
         width: 750px;
@@ -109,7 +109,7 @@ html {
     display: none;
     z-index: 1;
     right: -10px;
-    top: 25px;
+    top: 26px;
 }
 
 .header .container .links ul a {
@@ -475,7 +475,7 @@ html {
     width: 400px;
     height: 400px;
     position: relative;
-    /* z-index: 1; */
+    z-index: 1;
     display: inline;
 
     flex: -1;
@@ -507,13 +507,14 @@ html {
     width: 100px;
     right: 300px;
     top: -50px;
-    z-index: -1;
+    z-index: -3;
 }
 
 .about .container .content .container2 .text p:first-of-type {
     font-weight: bold;
     line-height: 2;
     margin-bottom: 16px;
+    margin-top: 50px;
 }
 
 .about .container .content .container2 .text hr {
